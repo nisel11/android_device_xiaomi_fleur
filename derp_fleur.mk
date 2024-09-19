@@ -40,4 +40,4 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 BUILD_FINGERPRINT := Redmi/fleur_global/fleur:13/SP1A.210812.016/V816.0.4.0.TKEMIXM:user/release-keys
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="fleur_global-user 13 SP1A.210812.016 V816.0.4.0.TKEMIXM release-keys"
+    BuildDesc=$(call normalize-path-list, "fleur_global-user 13 SP1A.210812.016 V816.0.4.0.TKEMIXM release-keys")
