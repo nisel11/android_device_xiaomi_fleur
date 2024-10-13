@@ -11,10 +11,27 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from device makefile.
 $(call inherit-product, device/xiaomi/fleur/device.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common PixelStar stuff.
+$(call inherit-product, vendor/pixelstar/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_fleur
+# Boot Animation
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_SCREEN_HEIGHT := 2400
+TARGET_SCREEN_WIDTH := 1080
+
+# Specific flags
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_USES_AOSP_RECOVERY := true
+TARGET_SUPPORTS_QUICK_TAP := true
+USE_PIXEL_CHARGER := true
+
+# GMS 
+TARGET_INCLUDE_LIVE_WALLPAPERS := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_GAPPS_ARCH := arm64
+TARGET_INCLUDE_STOCK_ARCORE := true
+
+PRODUCT_NAME := pixelstar_fleur
 PRODUCT_DEVICE := fleur
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
